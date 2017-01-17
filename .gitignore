@@ -1,8 +1,8 @@
-Thumbs.db
+# TeX outputs
+*.aux
+*.toc
+*.out
+*.log
+*.gz
+*.pdf
 
-__Previews/
-History/
-Project Logs for */
-Project Outputs for */
-*.htm
-*.PrjPCBStructure
