@@ -2,27 +2,40 @@
 \section{Ausgangssituation}
 
 \subsection{Adressierbare LEDs}
-An der Haupts\"aule ("Baum") im Baumhaus wurden
-16 LED-Streifen
+An der Haupts\"aule ("Baum") im
+Baumhaus
+\footnote{\url{http://www.baumhausberlin.de/}}
+wurden
+16
+handels\"ubliche
+LED-Streifen
 von jeweils ca. 2,5m L\"ange angebracht.
 Auf den Streifen befinden sich pro Meter
 60 adressierbare LEDs vom Typ SK6812-WWA.
 Jede LED kann in drei verschiedenen Farben leuchten:
-warmwei{\ss}, kaltwei{\ss} und bernstein.
-Alle drei Farben sind in jeweils
-256 Intensit\"atsabstufungen einstellbar (8 Bit pro Farbe).
+warmwei{\ss}, kaltwei{\ss} und
+bernsteinfarben.
+Jede der drei Farben ist in
+256 Intensit\"atsabstufungen einstellbar
+(8 Bit pro Farbe).
 Die LEDs erwarten ihre Konfigurationsbytes
-mit einem Takt von ca. 800kHz
+mit einem Takt von nominal 800kHz
 pulsweitencodiert
 am Dateneingang des LED-Streifens
-(1 Dateneingang pro Streifen).
+(ein Dateneingang pro Streifen).
+Zum Betrieb ben\"otigen die Streifen au{\ss}erdem
+eine Versorgungsspannung von 5V.
 
 \subsection{Adapter}
-Es ist derzeit vorgesehen,
-dass insgesamt vier Baum-Adapter
-die 16 LED-Streifen steuern,
-wobei ein Adapter die jeweils vier LED-Streifen
-einer Seite der S\"aule ansteuert.
+Die Idee ist,
+dass z.B. vier Baum-Adapter
+die insgesamt
+16 LED-Streifen
+steuern k\"onnten,
+wobei jeweils ein Adapter
+alle LEDs
+einer S\"aulenseite
+ansteuert.
 Der Adapter ist mit den LED-Streifen
 \"uber Stromversorgungs- und Datenkabel verbunden.
 

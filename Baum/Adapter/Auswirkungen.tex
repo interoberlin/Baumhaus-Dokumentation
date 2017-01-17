@@ -1,0 +1,62 @@
+
+\section{Auswirkungen}
+
+Nachfolgend werden die Auswirkungen der oben beschriebenen
+Umsetzung des Adapters auf das Gesamtsystem beschrieben.
+
+\subsection{Stromaufnahmemessung}
+
+Die Firmware muss
+in regelm\"a{\ss}igen Intervallen
+eine Messung der
+Stromaufnahme der LEDs
+(siehe \ref{Stromaufnahmemessung})
+vornehmen.
+Das Ergebnis soll in einer Variable
+f\"ur die interne
+und an einer BLE-Charakteristik f\"ur externe
+Weiterverarbeitung bereit stehen.
+
+\subsection{Kurzschlussdetektion}
+
+Wird bei der Stromaufnahmemessung
+ein Kurzschlussstrom detektiert,
+muss die Firmware die Anlage abschalten
+und \"uber eine BLE-Charakteristik
+ein entsprechendes Fehlersignal ausgeben.
+
+Ein Kurzschlussstrom sei eine Stromst\"arke,
+die um wenigstens 5\% h\"oher ausf\"allt,
+als bei maximaler Helligkeit
+aller angeschlossenen LEDs
+zu erwarten w\"are.
+
+\subsection{\"Uberstromdetektion}
+
+Die Firmware soll
+in regelm\"a{\ss}igen Intervallen
+aus den eingeschalteten LEDs
+den erwarteten Stromverbrauch errechnen
+und mit der gemessenen Stromaufnahme vergleichen.
+Ist der gemessene Strom
+um mehr als 10\% der maximalen Stromaufnahme
+einer S\"aulenseite
+h\"oher,
+als der erwartete,
+so soll die Firmware die Anlage abschalten
+und \"uber eine BLE-Charakteristik
+ein entsprechendes Fehlersignal ausgeben.
+
+\subsection{\"Uberlastungsdetektion}
+
+Die Firmware muss
+in regelm\"a{\ss}igen Intervallen
+aus der Stromaufnahmemessung
+die dem Netzteil entnommene Leistung berechnen
+und mit der einprogrammierten,
+maximalen Leistungsabgabe des Netzteils vergleichen.
+
+Wird die Maximalleistung des Netzteils \"uberschritten,
+so soll die Firmware die Anlage abschalten
+und \"uber eine BLE-Charakteristik
+ein entsprechendes Fehlersignal ausgeben.
