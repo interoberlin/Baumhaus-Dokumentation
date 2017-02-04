@@ -51,11 +51,10 @@ kein Einschaltsignal gegeben wird.
 
 \subsection{Stromaufnahmemessung}
 \label{Stromaufnahmemessung}
-Sowohl auf der 5V-,
-als auch auf der 12V-Stromversorgung
-f\"ur die LEDs
+Die LEDs erhalten vom Netzteil 5V.
+Die Stromaufnahme
 wird zur Laufzeit kontinuierlich
-der Stromfluss gemessen.
+gemessen.
 
 \begin{center}
 Allegro Microsystems ACS712-30A\footnote{\url{http://www.allegromicro.com/~/media/files/datasheets/acs712-datasheet.ashx}}
@@ -68,12 +67,14 @@ mithilfe des nRF51822-internen A/D-Wandlers
 an.
 
 \subsection{Leistungsschalter}
-Jeweils ein N-FET schaltet die R\"uckf\"uhrung (Minuspole)
-der 5V- und 12V-Anschl\"usse zur Netzteil-Masse durch.
+Ein N-FET schaltet die R\"uckf\"uhrung (Minuspol)
+der 5V-Spannung
+von den LEDs
+zur Netzteil-Masse durch.
 Die Gates sind mit Ausg\"angen des Mikrocontrollers verbunden
 und mit einem $20k\Omega$-Pull-Down-Widerstand versehen
-zum Sperren der FETs
-im Falle einer Fehlfunktion.
+zum Sperren des FETs
+-im Falle einer Fehlfunktion.
 
 Das Package ist
 aus thermischen Gr\"unden
@@ -93,19 +94,10 @@ dessen Ein-/Ausgang
 mit dem Mikrocontroller verbunden ist.
 
 \subsection{\"Uberstromschutzeinrichtung}
-Unabh\"angig von einer m\"oglichen, kontrollierten Abschaltung durch den Mikrocontroller
-verhindern zwei Schmelzsicherungen eine \"uberm\"a{\ss}ige Stromaufnahme.
-Zum Einsatz kommen KFZ-Flachstecksicherungen mit einem Schmelzstrom zwischen 15A und 30A,
-jeweils eine Sicherung an der 5V- und der 12V-Versorgung der LEDs.
+Eine Schmelzsicherung verhindert
+eine \"uberm\"a{\ss}ige Stromaufnahme
+der LEDs.
+Zum Einsatz kommt eine KFZ-Flachstecksicherung
+mit einem Schmelzstrom zwischen 25A und 30A.
 
 Als Sockel k\"onnen KFZ-Sicherungshalter oder Flachsteckh\"ulsen zum Einsatz kommen.
-
-Werden an die 12V-Versorgung ebenfalls LEDs angeschlossen,
-z.B. \"uber ein 12V/5V-DC/DC-Wandler,
-sollten zwei 15A-Sicherung verwendet werden,
-da sich die Stromaufnahme der LEDs
-dann auf beide Spannungen aufteilt.
-
-Wird die 12V-Versorgung nicht verwendet,
-sollte eine 25A- oder 30A-Sicherung
-f\"ur die 5V-Versorgung verwendet werden.

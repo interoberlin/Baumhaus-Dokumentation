@@ -68,7 +68,7 @@ Es w\"are ein Pull-Up-Widerstand von unter 380$\Omega$ erforderlich,
 der im Dauerbetrieb zu Verlusten und
 unerw\"unschter Erw\"armung f\"uhren w\"urde.
 
-\subsection{ATX-Netzteil-Ausg\"ange m\"ussen belastet werden}
+\subsection{ATX-Netzteil-Ausg\"ange ggf. belasten}
 ATX-Netzteile eignen sich grunds\"atzlich sehr gut
 f\"ur die Verwendung in eigenen L\"osungen.
 F\"ur den vorliegenden Einsatzzweck bieten sie sich u.a. deshalb an,
@@ -88,8 +88,12 @@ herangezogen\footnote{\url{https://www.technic3d.com/Forum/netzteile/netzeil-ext
 Auch kann der Tastgrad der Betaktung nicht beliebig klein
 werden\footnote{\url{http://www.mikrocontroller.net/topic/215686}}.
 
-Es sollten also beide Ausgangsspannungen belastet werden,
+Je nach Netzteil h\"atte es erforderlich werden k\"onnen,
+beide Ausgangsspannungen zu belasten,
 um sicherzustellen,
 dass das Netzteil die erforderliche Leistung einspeist
 und die Ausgangsspannung angemessen zu regeln imstande ist.
-
+In der Praxis hat sich jedoch gezeigt,
+dass die verwendeten Netzteile
+auch ohne Belastung der 12V
+stabile 5V liefern.
